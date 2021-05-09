@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: generate.py
+Sitemap: https://novcov19.ml/sitemap.xml
