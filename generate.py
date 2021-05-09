@@ -8,6 +8,9 @@ template = """
         padding: 0px;
       }}
     </style>
+    <link rel="icon" type="image/x-icon" href="https://thunder2020.pythonanywhere.com/home/assets/favicon.ico?m=1616760516.946934">
+    <title>Corona Tracker - {}</title>
+    <meta name="google-site-verification" content="z25fvQ62ziQp5ROIjNJnQizrG8TrsramdlmwDvnVrsc" />
     <meta name="description" content="This website gives the latest data and visualizations of the Novel Covid 19 Virus.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script async src="https://arc.io/widget.min.js#LHbAsxJ6"></script>
@@ -27,4 +30,4 @@ pages = ['index', 'timeline', 'datatable', 'map', 'counter', 'growth', 'infocent
 for page in pages:
   print(f"Writing {page}")
   with open(page+'.html', "w+") as f:
-    f.write(template.format(page))
+    f.write(template.format(page, page.capitalize))
