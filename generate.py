@@ -30,4 +30,4 @@ pages = ['index', 'timeline', 'datatable', 'map', 'counter', 'growth', 'infocent
 for page in pages:
   print(f"Writing {page}")
   with open(page+'.html', "w+") as f:
-    f.write(template.format(page, page.capitalize))
+    f.write(template.format((page if page != 'index' else 'home').capitalize(), page))
